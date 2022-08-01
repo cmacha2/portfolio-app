@@ -69,7 +69,7 @@ const NavBar = () => {
           <Typography
             variant="h6"
           >
-            Proyects
+            Projects
           </Typography>
           <Typography
             variant="h6"

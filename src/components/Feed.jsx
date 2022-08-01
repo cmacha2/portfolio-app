@@ -5,11 +5,12 @@ import Information from "./Information";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import NavBar from "./NavBar";
 import CircleIcon from "@mui/icons-material/Circle";
+import Projects from "./Projects";
 
 const WrapperFeed = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
-  height: "80vh",
+  height: "100vh",
   // backgroundColor: "#1DA5cb",
   // justifyContent: "space-between",
   padding: "0px 70px",
@@ -145,6 +146,10 @@ const ConsoleInformation = styled(Box)(({ theme }) => ({
   },
 }));
 
+const WrapperProyects = styled(Box)(({ theme }) => ({
+  height: "100vh",
+}));
+
 const Feed = () => {
   return (
     <>
@@ -219,6 +224,9 @@ const Feed = () => {
           </ConsoleInformation>
         </TerminalInfo>
       </WrapperFeed>
+      <WrapperProyects>
+        <Projects />
+      </WrapperProyects>
     </>
   );
 };
