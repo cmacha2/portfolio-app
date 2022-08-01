@@ -2,12 +2,11 @@ import { Box, Button, styled, Typography } from "@mui/material";
 import React from "react";
 import Console from "./Console";
 import Information from "./Information";
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import NavBar from "./NavBar";
 import CircleIcon from "@mui/icons-material/Circle";
 
 const WrapperFeed = styled(Box)(({ theme }) => ({
-  
   display: "flex",
   flexDirection: "row",
   height: "80vh",
@@ -16,7 +15,7 @@ const WrapperFeed = styled(Box)(({ theme }) => ({
   padding: "0px 70px",
   // display: "flex",
   // flexDirection: "row",
-   alignItems: "center",
+  alignItems: "center",
   // justifyContent: "center",
   // padding: "0px 50px",
   // gap: "10px",
@@ -24,10 +23,11 @@ const WrapperFeed = styled(Box)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     padding: "0px 30px",
+    
   },
   [theme.breakpoints.up("xl")]: {
-    gap:'80px'
-  }
+    gap: "80px",
+  },
 }));
 
 const ContainerDownload = styled(Box)(({ theme }) => ({
@@ -124,7 +124,7 @@ const ContainerBalls = styled(Box)(({ theme }) => ({
 }));
 
 const ContainerDominio = styled(Box)(({ theme }) => ({
-  backgroundColor: "#1A222D", 
+  backgroundColor: "#1A222D",
   display: "flex",
   justifyContent: "center",
   // display: "flex",
@@ -136,65 +136,90 @@ const ContainerDominio = styled(Box)(({ theme }) => ({
   // height: "1.5rem",
 }));
 
-const ConsoleInformation = styled(Box)(({ theme }) => ({ 
-    display: "flex",
-    flexDirection: "column",
-    padding: "30px 60px",
-    [theme.breakpoints.down("sm")]: {
-      padding: "30px 0px",
-    }
-}))
-
+const ConsoleInformation = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  padding: "30px 60px",
+  [theme.breakpoints.down("sm")]: {
+    padding: "30px 0px",
+  },
+}));
 
 const Feed = () => {
   return (
-  <>
-   <NavBar />
-    <WrapperFeed>
-      <Box>
-        <Description>
-          <Hola variant="h6">¡Hola!</Hola>
-          <Name variant="h6">Soy Cristian Machado,</Name>
-          <Developer variant="h6">Full Stack Web Developer.</Developer>
-          <ContainerDownload>
- 
-        <Button variant="outlined" sx={{color:"#fff",borderColor:"#0ee687"}}><FileDownloadOutlinedIcon sx={{display:"flex",alignItems:"center",padding:"0px 10px 0px 0px"}}/>Download CV</Button>
-        </ContainerDownload>
-        </Description>
-       
-        
-      </Box>
-      <TerminalInfo>
-      <TopBar>
-        <ContainerBalls>
-          <CircleIcon sx={{ color: "#D25450", width: "1rem" }} />
-          <CircleIcon sx={{ color: "#D29F30", width: "1rem" }} />
-          <CircleIcon sx={{ color: "#26A93E", width: "1rem" }} />
-        </ContainerBalls>
-        <ContainerDominio>
-          {/* <Typography variant="span" sx={{ color: "#1DA5cb" }}>
+    <>
+      <NavBar />
+      <WrapperFeed>
+        <Box>
+          <Description>
+            <Hola variant="h6">¡Hellooo!</Hola>
+            <Name variant="h6">I'm Cristian Machado,</Name>
+            <Developer variant="h6">Full Stack Web Developer.</Developer>
+            <ContainerDownload>
+              <Button
+                variant="outlined"
+                startIcon={<FileDownloadOutlinedIcon />}
+                sx={{ color: "#fff", borderColor: "#0ee687" }}
+                target="_blank"
+                href="https://www.dropbox.com/s/lkbsqohl5mv5leh/Ingeniero%20de%20Software%20Profesional%20Curr%C3%ADculum.pdf?dl=0"
+              >
+                Download CV
+              </Button>
+            </ContainerDownload>
+          </Description>
+        </Box>
+        <TerminalInfo>
+          <TopBar>
+            <ContainerBalls>
+              <CircleIcon sx={{ color: "#D25450", width: "1rem" }} />
+              <CircleIcon sx={{ color: "#D29F30", width: "1rem" }} />
+              <CircleIcon sx={{ color: "#26A93E", width: "1rem" }} />
+            </ContainerBalls>
+            <ContainerDominio>
+              {/* <Typography variant="span" sx={{ color: "#1DA5cb" }}>
             cmacha2.com
           </Typography> */}
-        </ContainerDominio>
-      </TopBar>
-      <ConsoleInformation>
-        <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`const aboutMe = {`}</Typography>
-        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`profesion : Full Stack Web Developer,`}</Typography>
-        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`frontEndLanguages : ["React-Redux", "React Native"],`}</Typography>
-        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`backEndLanguages : ["NodeJS", "ExpressJS"],`}</Typography>
-        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`dataBase : ["PostgresSQL", "MongoDB"]`}</Typography>
-        <Typography variant="p" sx={{ color: "#FFFFFF",paddingBottom:"20px" }}>{`}`}</Typography>
+            </ContainerDominio>
+          </TopBar>
+          <ConsoleInformation>
+            <Typography
+              variant="p"
+              sx={{ color: "#FFFFFF" }}
+            >{`const aboutMe = {`}</Typography>
+            <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            >{`profesion : Full Stack Web Developer,`}</Typography>
+            <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            >{`frontEndLanguages : ["React-Redux", "React Native"],`}</Typography>
+            <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            >{`backEndLanguages : ["NodeJS", "ExpressJS"],`}</Typography>
+            <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            >{`dataBase : ["PostgresSQL", "MongoDB"]`}</Typography>
+            <Typography
+              variant="p"
+              sx={{ color: "#FFFFFF", paddingBottom: "20px" }}
+            >{`}`}</Typography>
 
-        <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`const education = {`}</Typography>
-        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`bootcamp : SoyHenry,`}</Typography>
-        <Typography variant="p" sx={{ color: "#FFFFFF",}}>{`}`}</Typography>
-  
-      </ConsoleInformation>
-    </TerminalInfo>
-
-    </WrapperFeed>
-  </>
-     
+            <Typography
+              variant="p"
+              sx={{ color: "#FFFFFF" }}
+            >{`const education = {`}</Typography>
+            <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            >{`bootcamp : SoyHenry,`}</Typography>
+            <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`}`}</Typography>
+          </ConsoleInformation>
+        </TerminalInfo>
+      </WrapperFeed>
+    </>
   );
 };
 

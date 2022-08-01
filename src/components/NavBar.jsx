@@ -3,6 +3,7 @@ import {
   Avatar,
   Badge,
   Box,
+  Button,
   InputBase,
   Menu,
   MenuItem,
@@ -24,6 +25,7 @@ const StyledToolbar = styled(Toolbar)(({theme})=>({
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     justifyContent: "center",
+    
   }
 }));
 
@@ -40,15 +42,23 @@ const Links = styled(Box)(({ theme }) => ({
 
 const Icons = styled(Box)(({ theme }) => ({
   display: "flex",
-  gap: "20px",
+  // gap: "20px",
   alignItems: "center",
   padding: "0px 50px",
-  color: "#fff",
   [theme.breakpoints.down("sm")]: {
     display: "flex",
-    gap: "20px",
+    gap: "10px",
     alignItems: "center",
   },
+}));
+
+const ButtonIcon = styled(Button)(({ theme }) => ({
+  backgroundColor: "transparent",
+  color: "#fff",
+  width: "40px",
+  "&:hover": {
+    backgroundColor: "red",
+  }
 }));
 
 const NavBar = () => {
@@ -74,9 +84,9 @@ const NavBar = () => {
         </Links>
 
         <Icons>
-          <LinkedInIcon />
-          <GitHubIcon />
-          <TwitterIcon />
+          <ButtonIcon fontSize="small" startIcon={<LinkedInIcon/>}/>
+          <ButtonIcon startIcon={<GitHubIcon size={40}/>}/>
+          <ButtonIcon startIcon={<TwitterIcon/>}/>
         </Icons>
       </StyledToolbar>
     </AppBar>
