@@ -1,35 +1,16 @@
-import { createStyles, makeStyles } from '@material-ui/core';
+import { createGlobalStyle } from "styled-components";
 
-const useStyles = makeStyles(() =>
-  createStyles({
-    '@global': {
-      html: {
-        '-webkit-font-smoothing': 'antialiased',
-        '-moz-osx-font-smoothing': 'grayscale',
-        height: '100%',
-        width: '100%',
-        backgroundColor: `#1C2229`,
-        backgroundImage: `linear-gradient(58deg, rgba(25,34,41,1) 15%, #212831 50%, rgba(45,81,147,1) 100%)`,
-      },
-      '*, *::before, *::after': {
-        boxSizing: 'inherit'
-      },
-      body: {
-        height: '100%',
-        width: '100%'
-      },
-      '#root': {
-        height: '100%',
-        width: '100%'
-      }
-    }
-  })
-);
-
-const GlobalStyles = () => {
-  useStyles();
-
-  return null;
-};
-
-export default GlobalStyles;
+export const GlobalStyle = createGlobalStyle`
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background:'#000000'
+  }
+`;

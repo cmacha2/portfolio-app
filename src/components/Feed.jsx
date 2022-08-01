@@ -6,28 +6,31 @@ import NavBar from "./NavBar";
 import CircleIcon from "@mui/icons-material/Circle";
 
 const WrapperFeed = styled(Box)(({ theme }) => ({
-  backgroundColor: `#1C2229`,
-  backgroundImage: `linear-gradient(58deg, rgba(25,34,41,1) 15%, #212831 50%, rgba(45,81,147,1) 100%)`,
-  height: "100vh",
+  
   display: "flex",
   flexDirection: "row",
-  alignItems: "center",
-  justifyContent: "center",
+  height: "80vh",
+  // backgroundColor: "#1DA5cb",
+  // justifyContent: "space-between",
   padding: "0px 50px",
-  gap: "10px",
-  [theme.breakpoints.down("md")]: {
+  // display: "flex",
+  // flexDirection: "row",
+   alignItems: "center",
+  // justifyContent: "center",
+  // padding: "0px 50px",
+  // gap: "10px",
+  [theme.breakpoints.down("sm")]: {
     display: "flex",
     flexDirection: "column",
   },
+  [theme.breakpoints.up("xl")]: {
+    gap:'80px'
+  }
 }));
 
 const ContainerInfo = styled(Box)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  // backgroundColor: `red`,
-  // width: "60%",
-  //   padding: "70px 0px",
-  justifyContent: "center",
+  // backgroundColor: "#1DA5cb",
+
   //   [theme.breakpoints.down("sm")]: {
   //     display: "flex",
   //     flexDirection: "column",
@@ -73,24 +76,38 @@ const Developer = styled(Typography)(({ theme }) => ({
 
 const TerminalInfo = styled(Box)(({ theme }) => ({
   background: "#1A222D",
-  // width: "80vh",
-  height: "50vh",
+  width: "100vh",
+  height: "60vh",
   borderRadius: "20px",
   border: "2px solid #414346",
+  [theme.breakpoints.down("sm")]: {
+    padding: "0px 60px",
+    width: "30vh",
+    height: "auto",
+  },
 }));
+
 const TopBar = styled(Box)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
+  // display: "flex",
+  // flexDirection: "row",
+  background: "red",
+  // justifyContent: "space-between",
+  // alignItems: "center",
 }));
 
 const ContainerBalls = styled(Box)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  gap: "10px",
-  padding: "10px 30px",
-  paddingRight: "80px",
+  // display: "flex",
+  // flexDirection: "row",
+  // alignItems: "center",
+  // gap: "10px",
+  // padding: "10px 30px",
+  // paddingRight: "80px",
+  // [theme.breakpoints.down("sm")]: {
+  //   display: "flex",
+  //   justifyContent: "flex-start" ,
+  //   paddingRight: "10px",
+  //   backgroundColor: "red",
+  // },
 }));
 
 const ContainerDominio = styled(Box)(({ theme }) => ({
@@ -103,16 +120,21 @@ const ContainerDominio = styled(Box)(({ theme }) => ({
   // height: "1.5rem",
 }));
 
-const ContainerInformation = styled(Box)(({ theme }) => ({ 
+const ConsoleInformation = styled(Box)(({ theme }) => ({ 
     display: "flex",
     flexDirection: "column",
     padding: "30px 60px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "30px 0px",
+    }
 }))
+
 
 const Feed = () => {
   return (
+  <>
+   <NavBar />
     <WrapperFeed>
-      <NavBar />
       <ContainerInfo>
         <Description>
           <Hola variant="h6">¡Hola!</Hola>
@@ -133,7 +155,7 @@ const Feed = () => {
           </Typography>
         </ContainerDominio>
       </TopBar>
-      <ContainerInformation>
+      <ConsoleInformation>
         <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`const aboutMe = {`}</Typography>
         <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`profesion : Full Stack Web Developer,`}</Typography>
         <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`frontEndLanguages : ["React-Redux", "React Native"],`}</Typography>
@@ -145,10 +167,12 @@ const Feed = () => {
         <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`bootcamp : SoyHenry,`}</Typography>
         <Typography variant="p" sx={{ color: "#FFFFFF",}}>{`}`}</Typography>
   
-      </ContainerInformation>
+      </ConsoleInformation>
     </TerminalInfo>
 
     </WrapperFeed>
+  </>
+     
   );
 };
 

@@ -53,24 +53,21 @@ const Icons = styled(Box)(({ theme }) => ({
 
 const NavBar = () => {
   return (
-    <AppBar color="transparent">
+    <AppBar color="transparent" position='relative'>
       <StyledToolbar>
         <Links>
           <Typography
             variant="h6"
-            // sx={{ display: { xs: "none", sm: "block" } }}
           >
             Proyects
           </Typography>
           <Typography
             variant="h6"
-            // sx={{ display: { xs: "none", sm: "block" } }}
           >
             Experience
           </Typography>
           <Typography
             variant="h6"
-            // sx={{ display: { xs: "none", sm: "block" } }}
           >
             Contact
           </Typography>
