@@ -1,7 +1,8 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Button, styled, Typography } from "@mui/material";
 import React from "react";
 import Console from "./Console";
 import Information from "./Information";
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import NavBar from "./NavBar";
 import CircleIcon from "@mui/icons-material/Circle";
 
@@ -12,7 +13,7 @@ const WrapperFeed = styled(Box)(({ theme }) => ({
   height: "80vh",
   // backgroundColor: "#1DA5cb",
   // justifyContent: "space-between",
-  padding: "0px 50px",
+  padding: "0px 70px",
   // display: "flex",
   // flexDirection: "row",
    alignItems: "center",
@@ -22,19 +23,26 @@ const WrapperFeed = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     flexDirection: "column",
+    padding: "0px 30px",
   },
   [theme.breakpoints.up("xl")]: {
     gap:'80px'
   }
 }));
 
-const ContainerInfo = styled(Box)(({ theme }) => ({
-  // backgroundColor: "#1DA5cb",
+const ContainerDownload = styled(Box)(({ theme }) => ({
+  //  backgroundColor: "#1DA5cb",
+  //  display: "flex",
+  //   flexDirection: "column",
 
   //   [theme.breakpoints.down("sm")]: {
   //     display: "flex",
   //     flexDirection: "column",
   //   }
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "15px 0px",
 }));
 
 const Description = styled(Box)(({ theme }) => ({
@@ -81,21 +89,26 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
   borderRadius: "20px",
   border: "2px solid #414346",
   [theme.breakpoints.down("sm")]: {
-    padding: "0px 60px",
+    padding: "0px 50px",
     width: "30vh",
     height: "auto",
   },
 }));
 
 const TopBar = styled(Box)(({ theme }) => ({
-  // display: "flex",
-  // flexDirection: "row",
-  background: "red",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  // background: "red",
   // justifyContent: "space-between",
   // alignItems: "center",
 }));
 
 const ContainerBalls = styled(Box)(({ theme }) => ({
+  display: "flex",
+  padding: "10px 30px",
+  flexDirection: "row",
+  gap: "10px",
   // display: "flex",
   // flexDirection: "row",
   // alignItems: "center",
@@ -111,6 +124,9 @@ const ContainerBalls = styled(Box)(({ theme }) => ({
 }));
 
 const ContainerDominio = styled(Box)(({ theme }) => ({
+  backgroundColor: "#1A222D", 
+  display: "flex",
+  justifyContent: "center",
   // display: "flex",
   // alignItems: "center",
   // justifyContent: "center",
@@ -135,13 +151,19 @@ const Feed = () => {
   <>
    <NavBar />
     <WrapperFeed>
-      <ContainerInfo>
+      <Box>
         <Description>
           <Hola variant="h6">¡Hola!</Hola>
           <Name variant="h6">Soy Cristian Machado,</Name>
           <Developer variant="h6">Full Stack Web Developer.</Developer>
+          <ContainerDownload>
+ 
+        <Button variant="outlined" sx={{color:"#fff",borderColor:"#0ee687"}}><FileDownloadOutlinedIcon sx={{display:"flex",alignItems:"center",padding:"0px 10px 0px 0px"}}/>Download CV</Button>
+        </ContainerDownload>
         </Description>
-      </ContainerInfo>
+       
+        
+      </Box>
       <TerminalInfo>
       <TopBar>
         <ContainerBalls>
@@ -150,9 +172,9 @@ const Feed = () => {
           <CircleIcon sx={{ color: "#26A93E", width: "1rem" }} />
         </ContainerBalls>
         <ContainerDominio>
-          <Typography variant="span" sx={{ color: "#1DA5cb" }}>
+          {/* <Typography variant="span" sx={{ color: "#1DA5cb" }}>
             cmacha2.com
-          </Typography>
+          </Typography> */}
         </ContainerDominio>
       </TopBar>
       <ConsoleInformation>
