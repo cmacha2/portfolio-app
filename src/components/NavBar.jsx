@@ -57,13 +57,13 @@ const ButtonIcon = styled(Button)(({ theme }) => ({
   color: "#fff",
   width: "40px",
   "&:hover": {
-    backgroundColor: "red",
-  }
+    backgroundColor: "transparent",
+  },
 }));
 
 const NavBar = () => {
   return (
-    <AppBar color="transparent" position='relative'>
+    <Box color="transparent" position='relative'>
       <StyledToolbar>
         <Links>
           <Typography
@@ -84,12 +84,12 @@ const NavBar = () => {
         </Links>
 
         <Icons>
-          <ButtonIcon fontSize="small" startIcon={<LinkedInIcon/>}/>
-          <ButtonIcon startIcon={<GitHubIcon size={40}/>}/>
-          <ButtonIcon startIcon={<TwitterIcon/>}/>
+          <ButtonIcon href="https://www.linkedin.com/in/cmacha2/" target="_blank" fontSize="small" startIcon={<LinkedInIcon/>}/>
+          <ButtonIcon  href="https://github.com/cmacha2" target="_blank" startIcon={<GitHubIcon size={40}/>}/>
+          <ButtonIcon  href="https://twitter.com/cmacha2_08" target="_blank" startIcon={<TwitterIcon/>}/>
         </Icons>
       </StyledToolbar>
-    </AppBar>
+    </Box>
   );
 };
 
