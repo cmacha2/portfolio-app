@@ -234,15 +234,15 @@ const Feed = () => {
           </ConsoleInformation>
         </TerminalInfo>
       </WrapperFeed>
-      <WrapperProyects>
+      {/* <Box> */}
         <Projects />
-      </WrapperProyects>
-      <WrapperExperience>
-        <Experience />
-      </WrapperExperience>
-      <WrapperContact>
+      {/* </Box> */}
+      {/* <Box> */}
+        {/* <Experience /> */}
+      {/* </Box> */}
+      {/* <Box> */}
         <Contact />
-      </WrapperContact>
+      {/* </Box> */}
     </>
   );
 };

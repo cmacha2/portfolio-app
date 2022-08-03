@@ -11,23 +11,24 @@ const firstProject = 'This project was born with the need to that a wholesale co
 // }));
 
   const ContainerProjects = styled(Box)(({ theme }) => ({
-    // display: "flex",
-    // flexDirection: "column",
-    // justifyContent: "center",
-    // alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "70px",
   }));
 
 
 const Projects = () => {
   return (
-    <Box>
-      <Typography variant="h5" color="white" sx={{ padding: "20px 70px" }}>
+    <Box >
+      <Typography variant="h5" color="white" sx={{ padding: "20px 70px" }} id="Projects">
         Latest Works
       </Typography>
       <ContainerProjects>
         <Project urlVideo="https://www.youtube.com/watch?v=7sDY4m8KNLc" title="Script Music" description={firstProject}/>
-        <ProjectReverse urlVideo="https://www.youtube.com/watch?v=7sDY4m8KNLc" title="Script Music" description={firstProject}/>
-        <Project urlVideo="https://www.youtube.com/watch?v=7sDY4m8KNLc" title="Script Music" description={firstProject}/>
+        {/* <ProjectReverse urlVideo="https://www.youtube.com/watch?v=0jgl5L8yeTw" title="Script Music" description={firstProject}/> */}
+        <Project urlVideo="https://www.youtube.com/watch?v=d_t5nnK9Rn4" title="Script Music" description={firstProject}/>
         </ContainerProjects>
     </Box>
   );

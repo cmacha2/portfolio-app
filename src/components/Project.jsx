@@ -9,25 +9,74 @@ const ContainerProject = styled(Box)(({ theme }) => ({
     // flexWrap: "wrap",
     // justifyContent: "space-between",
     // alignItems: "center",
-    gap: "70px",
+    gap: "100px",
     padding: "0px 70px",
     //  backgroundColor: "#1DA5cb",
-    height: "60vh",
-    paddingBottom: "20px",
+    // height: "60vh",
+    // paddingBottom: "20px",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      alignItems: "center",
+      padding: "0px 20px",
+  },
+  [theme.breakpoints.down("md")]: {
+    gap: "50px",
+    padding: "0px 30px",
+}
   }));
   
   const ContainerVideo = styled(Box)(({ theme }) => ({
-    paddingTop: "20px",
-    //  width: '100vh',
-    //  backgroundColor: "#1DA5cb",
+    // paddingTop: "20px",
+    // backgroundColor: "red",
+    width: "100%", 
+    //  height: '30vh',
+    // backgroundColor: "#1DA5cb",
+  //   [theme.breakpoints.down("lg")]: {
+  //     width: '60vh',
+  //     height: '40vh',
+  // },
 
+  [theme.breakpoints.down("lg")]: {
+    width: "70vw", 
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+},
   }));
   
   const ContainerDescription = styled(Box)(({ theme }) => ({
+    // width: "50%", 
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
+    // backgroundColor: "green",
+    [theme.breakpoints.down("lg")]: {
+      width: "80%", 
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+  },
+  }));
+
+  const Title = styled(Typography)(({ theme }) => ({
+    fontSize: "2.1rem",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "2.5rem",
+  },
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1.8rem",
+},
+  }));
+
+  const Description = styled(Typography)(({ theme }) => ({
+    fontSize: "1.2rem",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "1.5rem",
+  },
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1rem",
+},
   }));
 
 const Project = ({urlVideo,title,description}) => {
@@ -35,18 +84,18 @@ const Project = ({urlVideo,title,description}) => {
     <ContainerProject>
           <ContainerVideo>
           <ReactPlayer
-            // width="100%"
-            // height="80%"
+          width={'100%'}
             url={urlVideo}
+      controls={false}
           />
           </ContainerVideo>
           <ContainerDescription>
-            <Typography variant="h6" color="white" sx={{paddingBottom:'15px'}}>
+            <Title variant="h6" color="white" sx={{paddingBottom:'15px'}}>
               {title}
-            </Typography>
-            <Typography variant="p" color="white">
+            </Title>
+            <Description variant="p" color="white">
               {description}
-            </Typography>
+            </Description>
             <Box sx={{ paddingTop: "30px" }}>
               <Button
                 endIcon={

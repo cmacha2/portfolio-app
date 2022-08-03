@@ -12,7 +12,7 @@ const Wrapper = styled((Box))(({theme})=>({
 }))
 
 const Container = styled(Box)(({ theme }) => ({
-     height: "85vh",
+     height: "55vh",
     // backgroundColor: "blue",
      display: "flex",
     justifyContent:"center",
@@ -29,7 +29,12 @@ const ContainerContact = styled(Box)(({ theme }) => ({
     gap:"20px",
     justifyContent:"center",
     alignItems:"center",
-    color:"#fff"
+    color:"#fff",
+    [theme.breakpoints.down("sm")]: {
+      width: '40vh',
+      height: '30vh',
+      textAlign: 'center',
+  }
 }))
 
 const Footer = styled(Box)(({ theme }) => ({

@@ -7,6 +7,7 @@ const Container = styled(Box)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    // paddingTop: "100px",
   }));
 
 const TerminalInfo = styled(Box)(({ theme }) => ({
@@ -75,6 +76,10 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
 
 const Experience = () => {
   return (
+    <Box sx={{paddingTop:"50px"}}>
+          <Typography variant="h5" color="white" sx={{ padding: "20px 70px" }} id="Projects">
+        Experience
+      </Typography>
     <Container>
           <TerminalInfo>
           <TopBar>
@@ -98,6 +103,7 @@ const Experience = () => {
           </ConsoleInformation>
         </TerminalInfo>
     </Container>
+    </Box>
   )
 }
 
