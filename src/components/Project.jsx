@@ -79,7 +79,7 @@ const ContainerProject = styled(Box)(({ theme }) => ({
 },
   }));
 
-const Project = ({urlVideo,title,description}) => {
+const Project = ({urlVideo,title,description,link}) => {
   return (
     <ContainerProject>
           <ContainerVideo>
@@ -104,7 +104,7 @@ const Project = ({urlVideo,title,description}) => {
                   />
                 }
                 sx={{ color: "#0ee687", textTransform: "none" }}
-                href="https://script-music.vercel.app/"
+                href={link}
                 target="_blank"
               >
                 See project

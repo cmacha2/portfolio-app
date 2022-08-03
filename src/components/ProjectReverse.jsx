@@ -82,7 +82,7 @@ const ContainerProject = styled(Box)(({ theme }) => ({
 },
   }));
 
-const ProjectReverse = ({urlVideo,title,description}) => {
+const ProjectReverse = ({urlVideo,title,description,link}) => {
   return (
     <ContainerProject>
           <ContainerDescription>
@@ -100,7 +100,7 @@ const ProjectReverse = ({urlVideo,title,description}) => {
                   />
                 }
                 sx={{ color: "#0ee687", textTransform: "none" }}
-                href="https://script-music.vercel.app/"
+                href={link}
                 target="_blank"
               >
                 See project

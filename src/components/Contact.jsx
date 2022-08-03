@@ -76,7 +76,9 @@ const Contact = () => {
           <ButtonIcon  href="https://twitter.com/cmacha2_08" target="_blank"  size="large" ><TwitterIcon fontSize='large'/></ButtonIcon>
             </Icons>
             <Typography variant="h6" >Do you have a project in mind? Let's make it happen!</Typography>
+            <a  href="mailto:cmacha2.08@gmail.com" style={{textDecoration:"none"}}>
             <Typography variant='h6' color="#0ee687">cmacha2.08@gmail.com</Typography>
+            </a>
         </ContainerContact>
     </Container>
     <Footer>
