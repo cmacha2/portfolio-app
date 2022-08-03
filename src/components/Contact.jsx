@@ -22,7 +22,7 @@ const Container = styled(Box)(({ theme }) => ({
 
 const ContainerContact = styled(Box)(({ theme }) => ({ 
     height: "50vh",
-    width: '80vh',
+    width: '80vw',
     // backgroundColor:'green',
     display: 'flex',
     flexDirection:"column",
@@ -31,7 +31,7 @@ const ContainerContact = styled(Box)(({ theme }) => ({
     alignItems:"center",
     color:"#fff",
     [theme.breakpoints.down("sm")]: {
-      width: '40vh',
+      width: '80vw',
       height: '30vh',
       textAlign: 'center',
   }
@@ -49,7 +49,8 @@ const Footer = styled(Box)(({ theme }) => ({
 }))
 
 const Icons = styled(Box)(({theme}) => ({
-    height: '20%'
+    height: '20%',
+    width: '100%',
 }))
 
 const ButtonIcon = styled(IconButton)(({ theme }) => ({

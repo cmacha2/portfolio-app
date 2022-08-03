@@ -12,7 +12,7 @@ const Container = styled(Box)(({ theme }) => ({
 
 const TerminalInfo = styled(Box)(({ theme }) => ({
     background: "#1A222D",
-    width: "100vw",
+    width: "50vw",
     height: "60vh",
     borderRadius: "20px",
     border: "2px solid #414346",
