@@ -17,7 +17,7 @@ const ContainerProject = styled(Box)(({ theme }) => ({
 
    
     [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
+      flexDirection: "column-reverse",
       alignItems: "center",
       padding: "0px 20px",
   },
