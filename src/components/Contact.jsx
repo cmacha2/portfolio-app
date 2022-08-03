@@ -49,8 +49,9 @@ const Footer = styled(Box)(({ theme }) => ({
 }))
 
 const Icons = styled(Box)(({theme}) => ({
+  // background:'red',
     height: '20%',
-    width: '100%',
+    // width: '100%',
 }))
 
 const ButtonIcon = styled(IconButton)(({ theme }) => ({
