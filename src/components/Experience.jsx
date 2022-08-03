@@ -102,7 +102,10 @@ const Experience = () => {
               variant="p"
               sx={{ color: "#FFFFFF" }}
             >{`May 2022 - July 2022 - Teaching Assistant`}</Typography>
-             <img width={"100%"} src="https://matiasfunes94.github.io/Portfolio-MatiasFunes94/assets/img/portfolio/henry.png" alt="logo" />
+            <a target="_blank" href="https://www.soyhenry.com/">
+
+             <img width={"100%"}  src="https://matiasfunes94.github.io/Portfolio-MatiasFunes94/assets/img/portfolio/henry.png" alt="logo" />
+            </a>
           </ConsoleInformation>
         </TerminalInfo>
     </Container>
