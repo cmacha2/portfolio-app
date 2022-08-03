@@ -12,14 +12,14 @@ const Container = styled(Box)(({ theme }) => ({
 
 const TerminalInfo = styled(Box)(({ theme }) => ({
     background: "#1A222D",
-    width: "100vh",
+    width: "100vw",
     height: "60vh",
     borderRadius: "20px",
     border: "2px solid #414346",
     [theme.breakpoints.down("sm")]: {
       padding: "0px 50px",
-      width: "30vh",
-      height: "auto",
+      width: "60%",
+      height: "35vh",
     },
   }));
   
@@ -49,6 +49,9 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
     //   paddingRight: "10px",
     //   backgroundColor: "red",
     // },
+    [theme.breakpoints.down("sm")]: {
+        padding: "10px 0px",
+      },
   }));
   
   const ContainerDominio = styled(Box)(({ theme }) => ({

@@ -124,6 +124,9 @@ const ContainerBalls = styled(Box)(({ theme }) => ({
   //   paddingRight: "10px",
   //   backgroundColor: "red",
   // },
+  [theme.breakpoints.down("sm")]: {
+    padding: "10px 0px",
+  },
 }));
 
 const ContainerDominio = styled(Box)(({ theme }) => ({
@@ -239,7 +242,7 @@ const Feed = () => {
         <Projects />
       {/* </Box> */}
       {/* <Box> */}
-        {/* <Experience /> */}
+        <Experience />
       {/* </Box> */}
       {/* <Box> */}
         <Contact />
