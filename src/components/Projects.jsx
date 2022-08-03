@@ -35,7 +35,7 @@ const Projects = () => {
       </LastWorks>
       <ContainerProjects>
         <Project urlVideo="https://www.youtube.com/watch?v=7sDY4m8KNLc" title="Script Music" description={firstProject}/>
-        {/* <ProjectReverse urlVideo="https://www.youtube.com/watch?v=0jgl5L8yeTw" title="Script Music" description={firstProject}/> */}
+        <ProjectReverse urlVideo="https://www.youtube.com/watch?v=0jgl5L8yeTw" title="Script Music" description={firstProject}/>
         <Project urlVideo="https://www.youtube.com/watch?v=d_t5nnK9Rn4" title="Script Music" description={firstProject}/>
         </ContainerProjects>
     </Container>

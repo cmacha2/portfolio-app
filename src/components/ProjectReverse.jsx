@@ -1,53 +1,86 @@
 import { Box, Button, styled, Typography } from '@mui/material';
-import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
+import WestIcon from '@mui/icons-material/West';
 import React from 'react'
 import ReactPlayer from 'react-player';
 
 const ContainerProject = styled(Box)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "row",
-  // flexWrap: "wrap",
-  // justifyContent: "space-between",
-  // alignItems: "center",
-  gap: "70px",
-  padding: "0px 70px",
-  //  backgroundColor: "#1DA5cb",
-  // height: "60vh",
-  // paddingBottom: "20px",
-  [theme.breakpoints.down("sm")]: {
-    flexDirection: "column",
+    display: "flex",
+    flexDirection: "row",
+    // flexWrap: "wrap",
+    // justifyContent: "space-between",
+    // alignItems: "right",
+    gap: "100px",
+    padding: "0px 70px",
+    //  backgroundColor: "#1DA5cb",
+    // height: "60vh",
+    // paddingBottom: "20px",
+
+   
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      alignItems: "center",
+      padding: "0px 20px",
+  },
+  [theme.breakpoints.down("md")]: {
+    gap: "50px",
+    padding: "0px 30px",
 }
-}));
+  }));
+  
+  const ContainerVideo = styled(Box)(({ theme }) => ({
+    // paddingTop: "20px",
+    // backgroundColor: "red",
+    width: "100%", 
+    //  height: '30vh',
+    // backgroundColor: "#1DA5cb",
+  //   [theme.breakpoints.down("lg")]: {
+  //     width: '60vh',
+  //     height: '40vh',
+  // },
 
-const ContainerVideo = styled(Box)(({ theme }) => ({
-  paddingTop: "20px",
-  backgroundColor: "red",
-  //  width: '100vh',
-  //  backgroundColor: "#1DA5cb",
-  [theme.breakpoints.up("xl")]: {
-      //  width: "100vh",
-  }
-}));
+  [theme.breakpoints.down("lg")]: {
+    width: "70vw", 
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+},
+  }));
+  
+  const ContainerDescription = styled(Box)(({ theme }) => ({
+    // width: "50%", 
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-end",
+    textAlign: "right",
+    // backgroundColor: "green",
+    [theme.breakpoints.down("lg")]: {
+      width: "80%", 
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+  },
+  }));
 
-const ContainerDescription = styled(Box)(({ theme }) => ({
-  width: "70%", 
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "flex-start",
-  // backgroundColor: "green",
-  [theme.breakpoints.up("xl")]: {
-    // fontSize: "1.5rem",
-  }
-}));
+  const Title = styled(Typography)(({ theme }) => ({
+    fontSize: "2.1rem",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "2.5rem",
+  },
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1.8rem",
+},
+  }));
 
-const Title = styled(Typography)(({ theme }) => ({
-  fontSize: "2rem",
-}));
-
-const Description = styled(Typography)(({ theme }) => ({
-  fontSize: "1.2rem",
-}));
+  const Description = styled(Typography)(({ theme }) => ({
+    fontSize: "1.2rem",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "1.5rem",
+  },
+  [theme.breakpoints.down("lg")]: {
+    fontSize: "1rem",
+},
+  }));
 
 const ProjectReverse = ({urlVideo,title,description}) => {
   return (
@@ -61,8 +94,8 @@ const ProjectReverse = ({urlVideo,title,description}) => {
             </Description>
             <Box sx={{ paddingTop: "30px" }}>
               <Button
-                endIcon={
-                  <EastOutlinedIcon
+                startIcon={
+                  <WestIcon
                     sx={{ paddingBottom: "3px", width: "20px" }}
                   />
                 }
@@ -76,9 +109,9 @@ const ProjectReverse = ({urlVideo,title,description}) => {
           </ContainerDescription>
           <ContainerVideo>
           <ReactPlayer
-            // width="100%"
-            // height="80%"
+          width={'100%'}
             url={urlVideo}
+      controls={false}
           />
           </ContainerVideo>
         </ContainerProject>
