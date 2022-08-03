@@ -93,7 +93,7 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
   border: "2px solid #414346",
   [theme.breakpoints.down("sm")]: {
     padding: "0px 50px",
-    width: "30vh",
+    width: "67%",
     height: "auto",
   },
 }));
@@ -144,7 +144,8 @@ const ConsoleInformation = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   padding: "30px 60px",
   [theme.breakpoints.down("sm")]: {
-    padding: "30px 0px",
+    fontSize: "0.9rem",
+    padding: "20px 0px",
   },
 }));
 
