@@ -6,6 +6,8 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import NavBar from "./NavBar";
 import CircleIcon from "@mui/icons-material/Circle";
 import Projects from "./Projects";
+import Experience from "./Experience";
+import Contact from "./Contact";
 
 const WrapperFeed = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -147,7 +149,15 @@ const ConsoleInformation = styled(Box)(({ theme }) => ({
 }));
 
 const WrapperProyects = styled(Box)(({ theme }) => ({
-  height: "100vh",
+  // height: "210vh",
+}));
+
+const WrapperExperience = styled(Box)(({ theme }) => ({
+  // height: "100vh",
+}));
+
+const WrapperContact = styled(Box)(({ theme }) => ({
+  
 }));
 
 const Feed = () => {
@@ -227,6 +237,12 @@ const Feed = () => {
       <WrapperProyects>
         <Projects />
       </WrapperProyects>
+      <WrapperExperience>
+        <Experience />
+      </WrapperExperience>
+      <WrapperContact>
+        <Contact />
+      </WrapperContact>
     </>
   );
 };
