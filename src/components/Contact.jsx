@@ -82,6 +82,7 @@ const Contact = () => {
         </ContainerContact>
     </Container>
     <Footer>
+   
         <Typography variant="p">© 2022 Cristian Machado</Typography>
     </Footer>
    </Wrapper>
