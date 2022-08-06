@@ -14,8 +14,8 @@ const Container = styled(Box)(({ theme }) => ({
 const LastWorks = styled(Typography)(({ theme }) => ({
   padding: "20px 70px",
   [theme.breakpoints.down("sm")]: {
-    padding: "50px 30px",
-    // paddingTop: "50px",
+    padding: "20px 30px",
+    paddingTop: "100px",
 },
 
 }));

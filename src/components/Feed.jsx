@@ -92,8 +92,8 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
   borderRadius: "20px",
   border: "2px solid #414346",
   [theme.breakpoints.down("sm")]: {
-    padding: "0px 50px",
-    width: "67%",
+    // padding: "0px 50px",
+    width: "100%",
     height: "auto",
   },
 }));
@@ -125,7 +125,7 @@ const ContainerBalls = styled(Box)(({ theme }) => ({
   //   backgroundColor: "red",
   // },
   [theme.breakpoints.down("sm")]: {
-    padding: "10px 0px",
+    padding: "10px 30px",
   },
 }));
 
@@ -148,7 +148,7 @@ const ConsoleInformation = styled(Box)(({ theme }) => ({
   padding: "30px 60px",
   [theme.breakpoints.down("sm")]: {
     fontSize: "0.9rem",
-    padding: "20px 0px",
+    padding: "10px 20px",
   },
 }));
 

@@ -17,8 +17,7 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
     borderRadius: "20px",
     border: "2px solid #414346",
     [theme.breakpoints.down("sm")]: {
-      padding: "0px 50px",
-      width: "60%",
+      width: "80%",
       height: "35vh",
     },
   }));
@@ -50,8 +49,8 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
     //   backgroundColor: "red",
     // },
     [theme.breakpoints.down("sm")]: {
-        padding: "10px 0px",
-      },
+      // padding: "10px 30px",
+    },
   }));
   
   const ContainerDominio = styled(Box)(({ theme }) => ({
@@ -71,9 +70,10 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     gap: "50px",
-    padding: "20px 40px",
+    padding: "30px 60px",
     [theme.breakpoints.down("sm")]: {
-      padding: "20px 0px",
+      padding: "20px 20px",
+      gap: "30px",
     },
   }));
 
