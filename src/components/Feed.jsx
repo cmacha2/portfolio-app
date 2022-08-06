@@ -208,7 +208,7 @@ const Feed = () => {
             <Typography
               variant="p"
               sx={{ color: "#12C2A1", padding: "5px 20px" }}
-            >{`profesion : Full Stack Web Developer,`}</Typography>
+            >{`profesion : "Full Stack Web Developer",`}</Typography>
             <Typography
               variant="p"
               sx={{ color: "#12C2A1", padding: "5px 20px" }}
@@ -229,12 +229,24 @@ const Feed = () => {
             <Typography
               variant="p"
               sx={{ color: "#FFFFFF" }}
-            >{`const education = {`}</Typography>
+            >{`const education = [`}</Typography>
             <Typography
               variant="p"
               sx={{ color: "#12C2A1", padding: "5px 20px" }}
-            >{`bootcamp : SoyHenry,`}</Typography>
-            <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`}`}</Typography>
+            >{`bootcamp : {`}</Typography>
+             <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            >{`name: "Henry",`}</Typography>
+             <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            ><a style={{textDecoration: "none",color: "#12C2A1"}} target='_blank' href="https://certificates.soyhenry.com/cert?id=348b9271-19c5-40d9-8a77-a22998b78445">{`certificate: "https://certificates.soyhenry.com/cert?id=348b9271-19c5-40d9-8a77-a22998b78445",`}</a></Typography>
+             <Typography
+              variant="p"
+              sx={{ color: "#12C2A1", padding: "5px 20px" }}
+            >{`}`}</Typography>
+            <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`]`}</Typography>
           </ConsoleInformation>
         </TerminalInfo>
       </WrapperFeed>
