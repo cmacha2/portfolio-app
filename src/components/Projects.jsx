@@ -36,9 +36,9 @@ const Projects = () => {
         Latest Works
       </LastWorks>
       <ContainerProjects>
-        <Project urlVideo="https://youtu.be/Og1z6ShsgMQ" linkGithub="https://github.com/JaluGJ/ScriptMusic" title="Script Music" description={firstProject} link='"https://script-music.vercel.app/"'/>
+        <Project urlVideo="https://youtu.be/Og1z6ShsgMQ" linkGithub="https://github.com/JaluGJ/ScriptMusic" title="Script Music" description={firstProject} link="https://script-music.vercel.app/" />
         <ProjectReverse urlVideo="https://youtu.be/hGiLeT5I6TY" linkGithub="https://github.com/cmacha2/client-countries-deploy" title="TravelWorld" description={secondProject} link="https://travel-world-app.vercel.app/"/>
-        <Project urlVideo="https://youtu.be/lKuNg_KPfPQ" linkGithub="https://github.com/cmacha2/movie-api" title="Movies App" description={thirdProject}/>
+        <Project urlVideo="https://youtu.be/lKuNg_KPfPQ" linkGithub="https://github.com/cmacha2/movie-api" title="Movies App" description={thirdProject} link="https://movie-api-pearl.vercel.app/"/>
         </ContainerProjects>
     </Container>
   );
