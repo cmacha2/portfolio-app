@@ -1,7 +1,6 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import React from "react";
 import Project from "./Project.jsx";
-import ReactPlayer from "react-player";
 import ProjectReverse from "./ProjectReverse.jsx";
 
 const firstProject = 'This project was born with the need to that a wholesale company can manage its products to put on sale, facilitates the management by the owner of the store, where he has total control over user products, sales graphs, he also has the possibility of making promotions and discounts which will be notified immediately to customers who use our mobile app, which provides greater ease of management and purchase for all users.'
