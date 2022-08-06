@@ -1,5 +1,6 @@
-import { Box, Button, styled, Typography } from '@mui/material';
+import { Box, Button, IconButton, styled, Typography } from '@mui/material';
 import WestIcon from '@mui/icons-material/West';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import React from 'react'
 import ReactPlayer from 'react-player';
 
@@ -82,7 +83,7 @@ const ContainerProject = styled(Box)(({ theme }) => ({
 },
   }));
 
-const ProjectReverse = ({urlVideo,title,description,link}) => {
+const ProjectReverse = ({urlVideo,title,description,link,linkGithub}) => {
   return (
     <ContainerProject>
           <ContainerDescription>
@@ -92,26 +93,33 @@ const ProjectReverse = ({urlVideo,title,description,link}) => {
             <Description variant="p" color="white">
               {description}
             </Description>
-            <Box sx={{ paddingTop: "30px" }}>
+            <Box sx={{ paddingTop: "30px",display:"flex",flexDirection:"row",gap:'10px'}}>
               <Button
                 startIcon={
                   <WestIcon
                     sx={{ paddingBottom: "3px", width: "20px" }}
                   />
                 }
-                sx={{ color: "#0ee687", textTransform: "none" }}
+                sx={{ color: "#0ee687", textTransform: "none"}}
                 href={link}
                 target="_blank"
               >
                 See project
               </Button>
+              <IconButton
+              sx={{ color: "#0ee687", textTransform: "none" }}
+                href={linkGithub}
+                target="_blank"
+              ><GitHubIcon
+              />
+              </IconButton>
             </Box>
           </ContainerDescription>
           <ContainerVideo>
           <ReactPlayer
           width={'100%'}
             url={urlVideo}
-      controls={false}
+      controls={true}
           />
           </ContainerVideo>
         </ContainerProject>

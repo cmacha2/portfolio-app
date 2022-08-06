@@ -32,7 +32,7 @@ const StyledToolbar = styled(Toolbar)(({theme})=>({
 const Links = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  gap: "20px",
+  gap: "30px",
   padding: "0px 50px",
   color: "#fff",
   [theme.breakpoints.down("sm")]: {
@@ -67,17 +67,17 @@ const NavBar = () => {
       <StyledToolbar>
         <Links>
           <Typography
-            variant="h6"
+            variant="span"
           >
             Projects
           </Typography>
           <Typography
-            variant="h6"
+            variant="span"
           >
             Experience
           </Typography>
           <Typography
-            variant="h6"
+            variant="span"
           >
             Contact
           </Typography>

@@ -1,5 +1,6 @@
-import { Box, Button, styled, Typography } from '@mui/material';
+import { Box, Button, IconButton, styled, Typography } from '@mui/material';
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
+import GitHubIcon from '@mui/icons-material/GitHub';
 import React from 'react'
 import ReactPlayer from 'react-player';
 
@@ -79,14 +80,14 @@ const ContainerProject = styled(Box)(({ theme }) => ({
 },
   }));
 
-const Project = ({urlVideo,title,description,link}) => {
+const Project = ({urlVideo,title,description,link,linkGithub}) => {
   return (
     <ContainerProject>
           <ContainerVideo>
           <ReactPlayer
           width={'100%'}
             url={urlVideo}
-      controls={false}
+            controls={true}
           />
           </ContainerVideo>
           <ContainerDescription>
@@ -96,19 +97,27 @@ const Project = ({urlVideo,title,description,link}) => {
             <Description variant="p" color="white">
               {description}
             </Description>
-            <Box sx={{ paddingTop: "30px" }}>
+            <Box sx={{ paddingTop: "30px",display:"flex",flexDirection:"row",gap:'10px'}}>
+            <IconButton
+              sx={{ color: "#0ee687", textTransform: "none" }}
+                href={linkGithub}
+                target="_blank"
+              ><GitHubIcon
+              />
+              </IconButton>
               <Button
                 endIcon={
                   <EastOutlinedIcon
                     sx={{ paddingBottom: "3px", width: "20px" }}
                   />
                 }
-                sx={{ color: "#0ee687", textTransform: "none" }}
+                sx={{ color: "#0ee687", textTransform: "none"}}
                 href={link}
                 target="_blank"
               >
                 See project
               </Button>
+              
             </Box>
           </ContainerDescription>
         </ContainerProject>
