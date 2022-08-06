@@ -17,7 +17,7 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
     borderRadius: "20px",
     border: "2px solid #414346",
     [theme.breakpoints.down("sm")]: {
-      width: "80%",
+      width: "83%",
       height: "35vh",
     },
   }));
