@@ -25,8 +25,7 @@ const StyledToolbar = styled(Toolbar)(({theme})=>({
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     justifyContent: "center",
-    
-  }
+  },
 }));
 
 const Links = styled(Box)(({ theme }) => ({
