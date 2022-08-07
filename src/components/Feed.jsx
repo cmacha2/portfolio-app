@@ -22,7 +22,7 @@ const WrapperFeed = styled(Box)(({ theme }) => ({
     height: "auto",
     },
     [theme.breakpoints.down("md")]: {
-        padding: "0px 30px",
+        padding: "30px 30px",
       },
 }));
 
