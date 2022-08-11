@@ -40,14 +40,14 @@ const ContainerContact = styled(Box)(({ theme }) => ({
 }));
 
 const Footer = styled(Box)(({ theme }) => ({
-  height: "5vh",
+  height: "10vh",
   width: "90%",
   borderTop: "1px solid #fff",
   color: "#fff",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  paddingTop: "20px",
+  // paddingTop: "20px",
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
@@ -67,9 +67,6 @@ const ButtonIcon = styled(IconButton)(({ theme }) => ({
 }));
 
 const Contact = () => {
-  const scrollTopFunction = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
 
 
   return (
@@ -118,11 +115,7 @@ const Contact = () => {
       <Footer>
         <Typography variant="p">© 2022 Cristian Machado</Typography>
       </Footer>
-      <Box sx={{ width: "98vw", display: "flex", justifyContent: "flex-end" }}>
-          <ButtonIcon onClick={scrollTopFunction}>
-            <ArrowCircleUpIcon fontSize="large" />
-          </ButtonIcon>
-      </Box>
+      
     </Wrapper>
   );
 };
