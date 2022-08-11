@@ -1,17 +1,31 @@
-import { Box, styled, Typography } from '@mui/material';
-import React from 'react'
+import { Box, keyframes, styled, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react'
 import Console from "./Console";
 import Information from "./Information";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import NavBar from "./NavBar";
 import CircleIcon from "@mui/icons-material/Circle";
 
-const TerminalInfo = styled(Box)(({ theme }) => ({
+const rollInLeft = keyframes`
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+`
+
+const TerminalInfo = styled(Box)(({ theme,roll}) => ({
     background: "#1A222D",
     width: "90vh",
     height: `auto`,
     borderRadius: "20px",
     border: "2px solid #414346",
+    animation: roll && `${rollInLeft} 0.6s ease-in-out`,
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       height: "auto",
@@ -53,8 +67,17 @@ const TerminalInfo = styled(Box)(({ theme }) => ({
   }));
 
 const TerminalAbout = () => {
+  const [roll,setRoll] = useState(false)
+
+  useEffect(() => {
+    setTimeout(()=>{
+      setRoll(true)
+    },500)
+  }, [])
+
+
   return (
-    <TerminalInfo>
+    <TerminalInfo roll={roll}>
     <TopBar>
       <ContainerBalls>
         <CircleIcon sx={{ color: "#D25450", width: "1rem" }} />

@@ -47,7 +47,7 @@ const ConsoleInformation = styled(Box)(({ theme }) => ({
 
 const Experience = () => {
   return (
-    <Box sx={{ paddingTop: "50px" }}>
+    <Box sx={{ paddingTop: "50px" }} id='experience'>
       <Typography
         variant="h5"
         color="white"

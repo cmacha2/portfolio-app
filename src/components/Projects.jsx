@@ -29,7 +29,7 @@ const LastWorks = styled(Typography)(({ theme }) => ({
 
 const Projects = () => {
   return (
-    <Box>
+    <Box id='projects'>
       <LastWorks variant="h5" color="white" id="Projects">
         Latest Works
       </LastWorks>

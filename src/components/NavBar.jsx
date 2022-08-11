@@ -18,6 +18,7 @@ import WebhookIcon from "@mui/icons-material/Webhook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Link } from "react-scroll";
 
 const StyledToolbar = styled(Toolbar)(({theme})=>({
   display: "flex",
@@ -65,24 +66,25 @@ const NavBar = () => {
     <Box color="transparent" position='relative'>
       <StyledToolbar>
         <Links>
+        <Link to='projects' spy={true} smooth={true}>
           <Typography
             variant="span"
           >
             Projects
-          </Typography>
-          <Typography
+          </Typography></Link>
+          <Link to='experience' spy={true} smooth={true}><Typography
             variant="span"
           >
             Experience
-          </Typography>
-          <Typography
+          </Typography></Link>
+          <Link to='contact' spy={true} smooth={true}> <Typography
             variant="span"
           >
             Contact
-          </Typography>
+          </Typography></Link>
         </Links>
 
-        <Icons>
+        <Icons id='top'>
           <ButtonIcon href="https://www.linkedin.com/in/cmacha2/" target="_blank" fontSize="small" startIcon={<LinkedInIcon/>}/>
           <ButtonIcon  href="https://github.com/cmacha2" target="_blank" startIcon={<GitHubIcon size={40}/>}/>
           <ButtonIcon  href="https://twitter.com/cmacha2_08" target="_blank" startIcon={<TwitterIcon/>}/>
