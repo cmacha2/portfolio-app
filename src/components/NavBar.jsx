@@ -4,6 +4,7 @@ import {
   Badge,
   Box,
   Button,
+  FormControlLabel,
   IconButton,
   InputBase,
   Menu,
@@ -17,6 +18,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Link } from "react-scroll";
+import MaterialUISwitch from "./Switch";
 
 const StyledToolbar = styled(Toolbar)(({theme})=>({
   display: "flex",
@@ -47,7 +49,9 @@ const Icons = styled(Box)(({ theme }) => ({
   gap: "20px",
   alignItems: "center",
   padding: "0px 60px",
-
+  [theme.breakpoints.down("md")]: {
+    padding: "0px 20px",
+  },
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     gap: "10px",
@@ -78,14 +82,16 @@ const NavBar = () => {
           >
             Contact
           </Typography></Link>
+       
         </Links>
 
         <Icons id='top'>
           <IconButton href="https://www.linkedin.com/in/cmacha2/" target="_blank" ><LinkedInIcon sx={{ fontSize: "27px" }}/></IconButton>
           <IconButton  href="https://github.com/cmacha2" target="_blank" ><GitHubIcon  sx={{ fontSize: "27px" }}/></IconButton>
           <IconButton  href="https://twitter.com/cmacha2_08" target="_blank" ><TwitterIcon  sx={{ fontSize: "27px" }}/></IconButton>
+       
         </Icons>
-
+      
       </StyledToolbar>
     </Box>
   );
