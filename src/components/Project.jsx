@@ -1,10 +1,17 @@
-import { Box, Button, IconButton, keyframes, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  keyframes,
+  styled,
+  Typography,
+} from "@mui/material";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AndroidIcon from "@mui/icons-material/Android";
 import React from "react";
 import ReactPlayer from "react-player";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 const rollInLeft = keyframes`
   0% {
@@ -17,15 +24,14 @@ const rollInLeft = keyframes`
             transform: translateX(0);
     opacity: 1;
   }
-`
+`;
 
-const ContainerProject = styled(Box)(({ theme,inView }) => ({
+const ContainerProject = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
   gap: "100px",
   padding: "0px 70px",
-  animation: inView && `${rollInLeft} 1s ease-in-out`,
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     alignItems: "center",
@@ -36,8 +42,9 @@ const ContainerProject = styled(Box)(({ theme,inView }) => ({
   },
 }));
 
-const ContainerVideo = styled(Box)(({ theme }) => ({
+const ContainerVideo = styled(Box)(({ theme, inView }) => ({
   width: "40%",
+  animation: inView && `${rollInLeft} 1s ease-in-out`,
   [theme.breakpoints.up("xl")]: {
     width: "30%",
   },
@@ -52,12 +59,13 @@ const ContainerVideo = styled(Box)(({ theme }) => ({
   },
 }));
 
-const ContainerDescription = styled(Box)(({ theme }) => ({
+const ContainerDescription = styled(Box)(({ theme, inView }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "flex-start",
   width: "50%",
+  animation: inView && `${rollInLeft} 1s ease-in-out`,
   [theme.breakpoints.down("sm")]: {
     width: "100%!important",
   },
@@ -87,14 +95,15 @@ const Description = styled(Typography)(({ theme }) => ({
 }));
 
 const Project = ({ urlVideo, title, description, link, linkGithub }) => {
-  const [ref, inView] = useInView();
+  const { ref: refDes, inView: inViewDes } = useInView();
+  const { ref, inView } = useInView();
 
   return (
-    <ContainerProject ref={ref} inView={inView}>
-      <ContainerVideo>
+    <ContainerProject>
+      <ContainerVideo ref={ref} inView={inView}>
         <ReactPlayer width={"100%"} url={urlVideo} controls={true} />
       </ContainerVideo>
-      <ContainerDescription>
+      <ContainerDescription ref={refDes} inView={inViewDes}>
         <Title variant="h6" color="white" sx={{ paddingBottom: "15px" }}>
           {title}
         </Title>
