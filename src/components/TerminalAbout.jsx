@@ -1,8 +1,6 @@
 import { Box, keyframes, styled, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
-import Console from "./Console";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
-import NavBar from "./NavBar";
+
 import CircleIcon from "@mui/icons-material/Circle";
 
 const rollInLeft = keyframes`

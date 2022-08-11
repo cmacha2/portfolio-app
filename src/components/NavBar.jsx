@@ -13,9 +13,6 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import Notification from "@mui/icons-material/NotificationsRounded";
-import MailIcon from "@mui/icons-material/Mail";
-import WebhookIcon from "@mui/icons-material/Webhook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";

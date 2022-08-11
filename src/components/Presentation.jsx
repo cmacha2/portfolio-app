@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
-import { Box, Button, styled, Typography } from '@mui/material';
+import { Box, Button, keyframes, styled, Typography } from '@mui/material';
 
+const rollInLeft = keyframes`
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+`
 
-  const Description = styled(Box)(({ theme }) => ({
+  const Description = styled(Box)(({ theme ,roll}) => ({
     display: "flex",
     flexDirection: "column",
+    animation: roll && `${rollInLeft} 0.6s ease-in-out`,
   }));
 
   const Hola = styled(Typography)(({ theme }) => ({
@@ -48,8 +61,15 @@ import { Box, Button, styled, Typography } from '@mui/material';
 
 
 const Presentation = () => {
+  const [roll,setRoll] = useState(false)
+
+  useEffect(() => {
+    setTimeout(()=>{
+      setRoll(true)
+    },500)
+  }, [])
   return (
-    <Description>
+    <Description roll={roll}>
             <Hola variant="h6">¡Hellooo!</Hola>
             <Name variant="h6">I'm Cristian Machado,</Name>
             <Developer variant="h6">Full Stack Web Developer.</Developer>
