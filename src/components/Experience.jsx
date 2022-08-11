@@ -1,12 +1,27 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, keyframes, styled, Typography } from "@mui/material";
 import React from "react";
 import CircleIcon from "@mui/icons-material/Circle";
+import { useInView } from "react-intersection-observer";
 
-const Container = styled(Box)(({ theme }) => ({
+const rollInLeft = keyframes`
+  0% {
+    -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+            transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+`
+
+const Container = styled(Box)(({ theme,inView }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   paddingBottom: "10px",
+  animation: inView && `${rollInLeft} 1s ease-in-out`,
 }));
 
 const TerminalInfo = styled(Box)(({ theme }) => ({
@@ -46,6 +61,8 @@ const ConsoleInformation = styled(Box)(({ theme }) => ({
 }));
 
 const Experience = () => {
+  const { ref, inView } = useInView();
+
   return (
     <Box sx={{ paddingTop: "50px" }} id='experience'>
       <Typography
@@ -56,7 +73,7 @@ const Experience = () => {
       >
         Experience
       </Typography>
-      <Container>
+      <Container ref={ref} inView={inView}>
         <TerminalInfo>
           <TopBar>
             <ContainerBalls>
