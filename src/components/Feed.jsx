@@ -32,20 +32,28 @@ const ScrollTopButton = styled(IconButton)(({ theme }) => ({
   right: "20px",
   bottom: "20px",
   zIndex: "1",
+  width: "50px",
+  height: "50px",
   [theme.breakpoints.down("sm")]: {
     // display: "none",
   },
 }));
 
-const Feed = () => {
+const IconScrollTop = () =>{
   const scrollTopFunction = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  }
+  return(
+    <ScrollTopButton onClick={scrollTopFunction}>
+      <ArrowCircleUpIcon sx={{ fontSize: "40px" }}  />
+    </ScrollTopButton>
+  )
+}
+
+const Feed = () => {
   return (
     <Box>
-      <ScrollTopButton onClick={scrollTopFunction}>
-        <ArrowCircleUpIcon fontSize="large" />
-      </ScrollTopButton>
+      <IconScrollTop/>
       <NavBar />
       <WrapperFeed>
         <Presentation />

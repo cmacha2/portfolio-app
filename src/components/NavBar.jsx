@@ -4,6 +4,7 @@ import {
   Badge,
   Box,
   Button,
+  IconButton,
   InputBase,
   Menu,
   MenuItem,
@@ -27,6 +28,9 @@ const StyledToolbar = styled(Toolbar)(({theme})=>({
     display: "flex",
     justifyContent: "center",
   },
+  [theme.breakpoints.down("lg")]: {
+    paddingBottom: "10px",
+  }
 }));
 
 const Links = styled(Box)(({ theme }) => ({
@@ -42,9 +46,11 @@ const Links = styled(Box)(({ theme }) => ({
 
 const Icons = styled(Box)(({ theme }) => ({
   display: "flex",
-  // gap: "20px",
+  flexDirection: "row",
+  gap: "20px",
   alignItems: "center",
-  padding: "0px 50px",
+  padding: "0px 60px",
+
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     gap: "10px",
@@ -52,14 +58,7 @@ const Icons = styled(Box)(({ theme }) => ({
   },
 }));
 
-const ButtonIcon = styled(Button)(({ theme }) => ({
-  backgroundColor: "transparent",
-  color: "#fff",
-  width: "40px",
-  "&:hover": {
-    backgroundColor: "transparent",
-  },
-}));
+
 
 const NavBar = () => {
   return (
@@ -85,10 +84,11 @@ const NavBar = () => {
         </Links>
 
         <Icons id='top'>
-          <ButtonIcon href="https://www.linkedin.com/in/cmacha2/" target="_blank" fontSize="small" startIcon={<LinkedInIcon/>}/>
-          <ButtonIcon  href="https://github.com/cmacha2" target="_blank" startIcon={<GitHubIcon size={40}/>}/>
-          <ButtonIcon  href="https://twitter.com/cmacha2_08" target="_blank" startIcon={<TwitterIcon/>}/>
+          <IconButton href="https://www.linkedin.com/in/cmacha2/" target="_blank" ><LinkedInIcon sx={{ fontSize: "27px" }}/></IconButton>
+          <IconButton  href="https://github.com/cmacha2" target="_blank" ><GitHubIcon  sx={{ fontSize: "27px" }}/></IconButton>
+          <IconButton  href="https://twitter.com/cmacha2_08" target="_blank" ><TwitterIcon  sx={{ fontSize: "27px" }}/></IconButton>
         </Icons>
+
       </StyledToolbar>
     </Box>
   );

@@ -1,7 +1,6 @@
 import { Box, keyframes, styled, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import Console from "./Console";
-import Information from "./Information";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import NavBar from "./NavBar";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -31,6 +30,7 @@ const TerminalInfo = styled(Box)(({ theme,roll}) => ({
       height: "auto",
       paddingBottom: "10px",
     },
+  
   }));
   
   const TopBar = styled(Box)(({ theme }) => ({
