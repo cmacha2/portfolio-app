@@ -1,6 +1,7 @@
 import { Box, IconButton, styled } from "@mui/material";
 import Feed from "./components/Feed";
-import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
+import IconScrollTop from "./components/IconScrollTop";
+
 
 const WrapperApp = styled(Box)({
   backgroundColor: `#1C2229`,
@@ -11,6 +12,7 @@ const WrapperApp = styled(Box)({
 function App() {
   return (
     <WrapperApp>
+      <IconScrollTop/>
       <Feed />
     </WrapperApp>
   );
