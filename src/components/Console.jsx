@@ -59,8 +59,8 @@ const Console = () => {
         <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`const aboutMe = {`}</Typography>
         <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`profesion : Full Stack Web Developer,`}</Typography>
         <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`frontEndLanguages : ["React-Redux", "React Native"],`}</Typography>
-        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`backEndLanguages : ["NodeJS", "ExpressJS"],`}</Typography>
-        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`dataBase : ["PostgresSQL", "MongoDB"]`}</Typography>
+        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`backEndLanguages : ["NodeJS", "ExpressJS", "GraphQl"],`}</Typography>
+        <Typography variant="p" sx={{ color: "#12C2A1",padding: "5px 20px",}}>{`dataBase : ["PostgresSQL", "MongoDB", "DynamoDB"]`}</Typography>
         <Typography variant="p" sx={{ color: "#FFFFFF",paddingBottom:"20px" }}>{`}`}</Typography>
 
         <Typography variant="p" sx={{ color: "#FFFFFF" }}>{`const education = {`}</Typography>

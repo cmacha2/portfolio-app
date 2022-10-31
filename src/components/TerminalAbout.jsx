@@ -101,11 +101,11 @@ const TerminalAbout = () => {
       <Typography
         variant="p"
         sx={{ color: "#12C2A1", padding: "5px 20px" }}
-      >{`backEndLanguages : ["NodeJS", "ExpressJS"],`}</Typography>
+      >{`backEndLanguages : ["NodeJS", "ExpressJS", "GraphQl"],`}</Typography>
       <Typography
         variant="p"
         sx={{ color: "#12C2A1", padding: "5px 20px" }}
-      >{`dataBase : ["PostgresSQL", "MongoDB"]`}</Typography>
+      >{`dataBase : ["PostgresSQL", "MongoDB", "DynamoDB"]`}</Typography>
       <Typography
         variant="p"
         sx={{ color: "#FFFFFF", paddingBottom: "20px" }}

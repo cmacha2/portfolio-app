@@ -3,6 +3,7 @@ import WestIcon from "@mui/icons-material/West";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
 import ReactPlayer from "react-player";
+import AndroidIcon from "@mui/icons-material/Android";
 import { useInView } from 'react-intersection-observer';
 
 const rollInRight = keyframes`
@@ -118,6 +119,15 @@ const ProjectReverse = ({ urlVideo, title, description, link, linkGithub }) => {
           >
             See project
           </Button>
+          {title === "Script Music" && (
+            <IconButton
+              sx={{ color: "#0ee687", textTransform: "none" }}
+              href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40cmacha2/Script-Music-08ea33b0e49a4c14bc2513caf641757a-signed.apk"
+              target="_blank"
+            >
+              <AndroidIcon />
+            </IconButton>
+          )}
           <IconButton
             sx={{ color: "#0ee687", textTransform: "none" }}
             href={linkGithub}

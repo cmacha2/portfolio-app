@@ -5,13 +5,13 @@ import { useInView } from "react-intersection-observer";
 
 const rollInLeft = keyframes`
   0% {
-    -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
-            transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 `
