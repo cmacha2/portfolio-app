@@ -79,7 +79,7 @@ const Presentation = () => {
                 startIcon={<FileDownloadOutlinedIcon />}
                 sx={{ color: "#fff", borderColor: "#0ee687" }}
                 target="_blank"
-                href="https://www.dropbox.com/s/so408lyjm1obaxi/Ingeniero%20de%20Software%20Profesional%20Curr%C3%ADculum.pdf?dl=0"
+                href="https://www.dropbox.com/s/gek3gb8numsvhe9/Ingeniero%20de%20Software%20Profesional%20Curr%C3%ADculum.pdf?dl=0"
               >
                 Download CV
               </Button>
